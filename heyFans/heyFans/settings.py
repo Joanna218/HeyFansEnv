@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'heyfansapp.apps.HeyfansappConfig'
+
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,16 @@ WSGI_APPLICATION = 'heyFans.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'HEYFANS',
+        'USER':'sa',
+        'PASSWORD':'joanna10544218',
+        'HOST':'JOANNA\SQLEXPRESS_TEST',
+        'OPTIONS':{
+            'driver': 'ODBC Driver 11 for SQL Server',
+        },
     }
 }
 

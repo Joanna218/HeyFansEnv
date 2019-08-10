@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block pagetitle %} 這是首頁 {% endblock %}
+{% block mainContent %}
+            <!-- 第一列row 粉絲比例圖、心情比例圖 -->
+            <div class="row">
+              <div class="col-md-4">
+                <div class="fansBox">
+                  <div class="fansBoxTitle">
+                    <h5>粉絲比例圖</h5>
+                    <span>以下顯示近3個月資料</span>
+                  </div>
+                  <div class="fansBoxChart">
+                    <canvas id="fansDoughnut" width="300" height="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="fansBox">
+                  <div class="fansBoxTitle">
+                    <h5>心情比例圖</h5>
+                  </div>
+                  <div class="fansBoxChart">
+                    <canvas id="moodBar"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 第二列row 粉黑文字雲、留言熱門話題排行 -->
+            <div class="row">
+              <div class="col-md-7">
+                <div class="fansBox">
+                  <div class="fansBoxTitle">
+                    <h5>粉黑文字雲</h5>
+                    <span>以下顯示近3個月資料</span>
+                  </div>
+                  <div class="fansBoxChart">
+                    <input
+                      type="checkbox"
+                      id="switch-blue"
+                      class="switch"
+                      checked
+                    />
+                    <label for="switch-blue" class="lbl-off">黑粉</label>
+                    <label for="switch-blue" class="lbl-on">紛絲</label>
+                    <div
+                      id="tag"
+                      style="border: 1px solid #000; height: 300px; width: 400px;"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+{% endblock %}

@@ -8,6 +8,8 @@ pylint = "*"
 
 [packages]
 django = "~=2.0"
+django-mssql = "*"
+django-pyodbc-azure = "*"
 
 [requires]
 python_version = "3.6"
