@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block pagetitle %} 這是競爭者分析 {% endblock %}
+{% block pagecss %} <link rel="stylesheet" href="{% static 'css/competitorapp.css' %}"> {% endblock%}
+
+{% block mainContent %}
+<!-- 第一列row 選擇粉絲專業 -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="fansBox BoxDiff">
+      <div class="fansBoxTitle col-md-4">
+        <h5>選擇粉絲專頁</h5>
+      </div>
+      <div class="checkBoxGroup col-md-8">
+        <li>
+          <input type="checkbox" value="韓國瑜" checked />韓國瑜
+        </li>
+        <li><input type="checkbox" value="賴清德" />賴清德</li>
+        <li><input type="checkbox" value="郭台銘" />郭台銘</li>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 第二列row 粉絲概觀、粉專影響力、離散圖分析 -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="fansBox">
+      <div class="fansBoxTitle">
+        <h5>粉絲概觀</h5>
+      </div>
+      <div id="fanPie" class="fansBoxChart" style="width: 100%;height:400px;">
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-md-4">
+    <div class="fansBox">
+      <div class="fansBoxTitle">
+        <h5>粉絲重疊</h5>
+      </div>
+      <div class="fansBoxChart">
+        <h1 id="fansOverlap">5010</h1>
+        <h6>個帳號重疊</h6>
+      </div>
+    </div>
+  </div> -->
+  <!-- <div class="col-md-4">
+    <div class="fansBox">
+      <div class="fansBoxTitle">
+        <h5>假帳號重疊</h5>
+      </div>
+      <div class="fansBoxChart">
+        <h1 id="fakeAccount">420</h1>
+        <h6>個假帳號重疊</h6>
+      </div>
+    </div>
+  </div> -->
+</div>
+<!-- 第三列row 粉絲概觀、粉專影響力、離散圖分析-->
+<div class="row">
+  <!-- <div class="col-md-6">
+    <div class="fansBox">
+      <div class="fansBoxTitle">
+        <h5>異常帳號</h5>
+      </div>
+      <div class="fansBoxChart">
+        <table>
+          <thead>
+            <tr>
+              <th>帳號名稱</th>
+              <th>單篇留言數</th>
+              <th>#Tag</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>陳思瑋</td>
+              <td>20則</td>
+              <td>#Tag</td>
+            </tr>
+            <tr>
+              <td>張桂華</td>
+              <td>10則</td>
+              <td>#Tag</td>
+            </tr>
+            <tr>
+              <td>江政侑</td>
+              <td>3則</td>
+              <td>#Tag</td>
+            </tr>
+            <tr>
+              <td>藍莉瑄</td>
+              <td>5則</td>
+              <td>#Tag</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+  <div class="col-md-6">
+    <div class="fansBox">
+      <div class="fansBoxTitle">
+        <h5>粉專影響力</h5>
+      </div>
+      <div id="fanInfluence" class="fansBoxChart" style="width: 300px;height:300px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="fansBox">
+      <div class="fansBoxTitle">
+        <h5>離散圖分析</h5>
+      </div>
+      <div id="fanScatter" class="fansBoxChart" style="width: 500px;height:300px;">
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block pagejs %} <script src="{% static 'js/competitorapp.js' %}"></script> {% endblock%}

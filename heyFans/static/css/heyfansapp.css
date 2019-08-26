@@ -1,0 +1,97 @@
+body {
+  height: 100%;
+  background-color: #f2f3f3; }
+    body .wrapper .row #main .content {
+      border: 1px solid;
+      background-color: #f2f3f3; }
+      body .wrapper .row #main .content .fansBox {
+        background-color: #fff;
+        margin-top: 30px;
+        padding: 15px;
+        border-radius: 40px;
+        box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .wrapper .row #main .content .fansBox .fansBoxTitle {
+          width: 90%;
+          margin: 15px 0px; }
+          body .wrapper .row #main .content .fansBox .fansBoxTitle h5 {
+            color: #fe816d; }
+          body .wrapper .row #main .content .fansBox .fansBoxTitle span {
+            color: #89878a;
+            font-size: 12px;
+            position: relative;
+            margin-left: 10px; }
+            body .wrapper .row #main .content .fansBox .fansBoxTitle span::before {
+              content: "";
+              display: block;
+              position: absolute;
+              height: 100%;
+              border-left: 5px solid #89878a;
+              margin-left: 2px;
+              margin-top: 7px; }
+        body .wrapper .row #main .content .fansBox .fansBoxChart {
+          width: 90%; }
+          body .wrapper .row #main .content .fansBox .fansBoxChart .lbl-off,
+          body .wrapper .row #main .content .fansBox .fansBoxChart .lbl-on {
+            cursor: pointer;
+            display: block;
+            font-size: 0.9em;
+            font-weight: bold;
+            line-height: 1em;
+            position: absolute;
+            top: 0.5em;
+            transition: opacity 0.25s ease-out 0.1s;
+            text-transform: uppercase; }
+          body .wrapper .row #main .content .fansBox .fansBoxChart .lbl-off {
+            right: 75px;
+            top: 60px; }
+          body .wrapper .row #main .content .fansBox .fansBoxChart .lbl-on {
+            color: #000;
+            opacity: 0;
+            right: 140px;
+            top: 60px; }
+          body .wrapper .row #main .content .fansBox .fansBoxChart .switch {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            height: 30px;
+            font-size: 1em;
+            right: 90px;
+            line-height: 0;
+            outline: none;
+            position: absolute;
+            top: 50px;
+            width: 90px; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch:before, body .wrapper .row #main .content .fansBox .fansBoxChart .switch:after {
+              content: "";
+              font-size: 1.2em;
+              position: absolute; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch:before {
+              border-radius: 1.25em;
+              background: #bdc3c7;
+              height: 1.875em;
+              left: -0.25em;
+              top: -0.1875em;
+              transition: background-color 0.25s ease-out 0.1s;
+              width: 120px; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch:after {
+              box-shadow: 0 0.0625em 0.375em 0 #666;
+              border-radius: 50%;
+              background: #fefefe;
+              height: 1.5em;
+              transform: translate(0, 0);
+              transition: transform 0.25s ease-out 0.1s;
+              width: 1.5em; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch:checked:after {
+              transform: translate(4.25em, 0); }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch:checked ~ .lbl-off {
+              opacity: 0; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch:checked ~ .lbl-on {
+              opacity: 1; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch#switch-orange:checked:before {
+              background: #e67e22; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart .switch#switch-blue:checked:before {
+              background: #3498db; }

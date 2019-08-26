@@ -1,0 +1,82 @@
+body {
+  height: 100%;
+  background-color: #f2f3f3; }
+  body .wrapper .row #main {
+    background-color: #f2f3f3;
+    min-height: 100vh; }
+    body .wrapper .row #main .header {
+      background-color: #4f4f4f;
+      height: 70px;
+      display: flex;
+      align-items: center; }
+      body .wrapper .row #main .header #headerLogo h2 {
+        color: #fff; }
+      body .wrapper .row #main .header #haederNotice .icon {
+        display: inline-block;
+        text-indent: -999px;
+        overflow: hidden;
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        background-color: #74788f; }
+    body .wrapper .row #main .content {
+      border: 1px solid;
+      background-color: #f2f3f3; }
+      body .wrapper .row #main .content .fansBox {
+        max-height: 100vh;
+        background-color: #fff;
+        margin-top: 30px;
+        padding-left: 15px;
+        border-radius: 15px;
+        box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .wrapper .row #main .content .fansBox.BoxDiff {
+          flex-direction: row; }
+        body .wrapper .row #main .content .fansBox .fansBoxTitle {
+          width: 90%;
+          margin: 15px 0px; }
+          body .wrapper .row #main .content .fansBox .fansBoxTitle h5 {
+            color: #fe816d; }
+        body .wrapper .row #main .content .fansBox .checkBoxGroup {
+          display: flex; }
+          body .wrapper .row #main .content .fansBox .checkBoxGroup li {
+            margin-right: 20px;
+            font-size: 20px; }
+            body .wrapper .row #main .content .fansBox .checkBoxGroup li input {
+              width: 20px;
+              height: 20px;
+              margin-right: 5px; }
+        body .wrapper .row #main .content .fansBox .fansBoxChart {
+          width: 90%;
+          text-align: center; }
+          body .wrapper .row #main .content .fansBox .fansBoxChart h1 {
+            font-size: 80px;
+            color: #d16c5d;
+            line-height: 0.1rem;
+            margin-top: 30px;
+            margin-bottom: 70px; }
+          body .wrapper .row #main .content .fansBox .fansBoxChart h6 {
+            color: #b5b4b4; }
+          body .wrapper .row #main .content .fansBox .fansBoxChart table {
+            width: 100%;
+            color: #787775;
+            margin-bottom: 30px;
+            position: relative; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart table thead {
+              font-size: 18px; }
+              body .wrapper .row #main .content .fansBox .fansBoxChart table thead::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                border-bottom: 1px solid #b5b4b4; }
+            body .wrapper .row #main .content .fansBox .fansBoxChart table tbody {
+              font-weight: 700; }
+              body .wrapper .row #main .content .fansBox .fansBoxChart table tbody tr {
+                border-bottom: 1px dashed #787775; }
+                body .wrapper .row #main .content .fansBox .fansBoxChart table tbody tr td {
+                  padding: 10px 0px; }
+

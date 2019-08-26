@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from heyfansapp.views import index
+from heyfansapp import views
+from competitorapp.views import competitor
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index)
+    path('', views.index),
+    path('index/', views.index),
+    path('competitor/', competitor),
+    path('testDB/', views.testDB),
+    #path('testDB/testDBAjax/', testDBAjax)
 ]

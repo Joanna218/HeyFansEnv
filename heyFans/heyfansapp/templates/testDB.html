@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>testDB</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</head>
+<body>
+  <form>{% csrf_token %}
+    <input type="text" id="inputData">
+    <button type="input" id="send">發送ajax</button>
+    <p id="data"></p>
+  </form>
+
+  <!-- {% for name in names %}
+  <p>{{name.MyName}} - {{name.MyUniQID}}</p>
+  <br>
+  {% endfor %} -->
+</body>
+<script>
+  $("#send").click('click', function(e) {
+    e.preventDefault();
+    var inputData = $("#inputData").val();
+    Data = {
+    'name': inputData
+    }
+    $.ajax({
+      url: '/testDB/',
+      type: 'POST',
+      data: {"name": inputData},
+      dataType: 'json'
+    }).done(function(res) {
+      console.log(res);
+    }).fail(function(err) {
+
+    });
+    });
+
+</script>
+</html>

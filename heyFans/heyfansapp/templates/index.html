@@ -1,25 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block pagetitle %} 這是首頁 {% endblock %}
+{% block pagecss %} <link rel="stylesheet" href="{% static 'css/heyfansapp.css' %}"> {% endblock%}
 {% block mainContent %}
             <!-- 第一列row 粉絲比例圖、心情比例圖 -->
             <div class="row">
               <div class="col-md-4">
                 <div class="fansBox">
                   <div class="fansBoxTitle">
-                    <h5>粉絲比例圖</h5>
+                    <h5>粉絲輪廓</h5>
                     <span>以下顯示近3個月資料</span>
                   </div>
-                  <div class="fansBoxChart">
-                    <canvas id="fansDoughnut" width="300" height="300"></canvas>
+                  <div id="fanProfile" class="fansBoxChart" style="width: 300px;height:300px;">
+                    <!-- <canvas id="fansDoughnut" width="300" height="300"></canvas> -->
                   </div>
                 </div>
               </div>
               <div class="col-md-8">
                 <div class="fansBox">
                   <div class="fansBoxTitle">
-                    <h5>心情比例圖</h5>
+                    <h5>粉專成長</h5>
                   </div>
-                  <div class="fansBoxChart">
+                  <div id="fanPageGrowth" class="fansBoxChart" style="width: 600px;height:320px;">
                     <canvas id="moodBar"></canvas>
                   </div>
                 </div>
@@ -50,5 +52,5 @@
                 </div>
               </div>
             </div>
-
 {% endblock %}
+{% block pagejs %} <script src="{% static 'js/heyfansapp.js' %}"></script> {% endblock%}
