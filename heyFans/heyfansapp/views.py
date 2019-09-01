@@ -2,12 +2,14 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponseRedirect,Http404,HttpResponse,render_to_response
 import json
 from django.http import HttpResponse,JsonResponse
-from heyfansapp.models import MyTable
+from heyfansapp.models import MyTable,PersonalPage
 from django.views.decorators.csrf import csrf_exempt
 @csrf_exempt
 # Create your views here.
-def index(request) :
-  return render(request, "index.html")
+def index(request):
+    query = 'SELECT Tag,Count(*) as 次數 FROM PersonalPage GROUP BY Tag'
+    data = PersonalPage.objects.raw(query)
+    return render(request, "index.html", locals())
 
 def testDB(request):
   if request.method=='POST':

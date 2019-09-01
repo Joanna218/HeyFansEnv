@@ -1,299 +1,86 @@
 /* ============= 粉絲比例圖-圓餅圖-Pie Special Label ===============*/
-// var weatherIcons = {
-//   'Sunny': './data/asset/img/weather/sunny_128.png',
-//   'Cloudy': './data/asset/img/weather/cloudy_128.png',
-//   'Showers': './data/asset/img/weather/showers_128.png'
-// };
-
+var colors = ['#9b92fe', '#7ba5c6', '#1f62ea', '#1990e9', '#49ddfc', '#6bdafe', '#39f381', '#e9e37c'];
 var fanPie = {
-  title: {
-      text: '粉絲概觀',
-      //subtext: '虚构数据',
-      left: 'center'
-  },
-  tooltip : {
-      trigger: 'item',
-      formatter: "{a} <br/>{b} : {c} ({d}%)"
-  },
-  legend: {
-      bottom: 10,
-      left: 'center',
-      data: ['網黑', '網粉','xxx']
-  },
-  series : [
-      {
-          type: 'pie',
-          radius : '65%',
-          center: ['50%', '50%'],
-          selectedMode: 'single',
-          data:[
-              {
-                  value:1548,
-                  name: '網黑',
-                  label: {
-                      normal: {
-                          formatter: [
-                              '{title|{b}}{abg|}',
-                              '  {weatherHead|天气}{valueHead|天数}{rateHead|占比}',
-                              '{hr|}',
-                              '  {Sunny|}{value|202}{rate|55.3%}',
-                              '  {Cloudy|}{value|142}{rate|38.9%}',
-                              '  {Showers|}{value|21}{rate|5.8%}'
-                          ].join('\n'),
-                          backgroundColor: '#eee',
-                          borderColor: '#777',
-                          borderWidth: 1,
-                          borderRadius: 4,
-                          rich: {
-                              title: {
-                                  color: '#eee',
-                                  align: 'center'
-                              },
-                              abg: {
-                                  backgroundColor: '#333',
-                                  width: '100%',
-                                  align: 'right',
-                                  height: 25,
-                                  borderRadius: [4, 4, 0, 0]
-                              },
-                              Sunny: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Sunny
-                                  }
-                              },
-                              Cloudy: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                     // image: weatherIcons.Cloudy
-                                  }
-                              },
-                              Showers: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Showers
-                                  }
-                              },
-                              weatherHead: {
-                                  color: '#333',
-                                  height: 24,
-                                  align: 'left'
-                              },
-                              hr: {
-                                  borderColor: '#777',
-                                  width: '100%',
-                                  borderWidth: 0.5,
-                                  height: 0
-                              },
-                              value: {
-                                  width: 20,
-                                  padding: [0, 20, 0, 30],
-                                  align: 'left'
-                              },
-                              valueHead: {
-                                  color: '#333',
-                                  width: 20,
-                                  padding: [0, 20, 0, 30],
-                                  align: 'center'
-                              },
-                              rate: {
-                                  width: 40,
-                                  align: 'right',
-                                  padding: [0, 10, 0, 0]
-                              },
-                              rateHead: {
-                                  color: '#333',
-                                  width: 40,
-                                  align: 'center',
-                                  padding: [0, 10, 0, 0]
-                              }
-                          }
-                      }
-                  }
-              },
-              {value:535, name: '網粉',label: {
-                      normal: {
-                          formatter: [
-                              '{title|{b}}{abg|}',
-                              '  {weatherHead|天气}{valueHead|天数}{rateHead|占比}',
-                              '{hr|}',
-                              '  {Sunny|}{value|202}{rate|55.3%}',
-                              '  {Cloudy|}{value|142}{rate|38.9%}',
-                              '  {Showers|}{value|21}{rate|5.8%}'
-                          ].join('\n'),
-                          backgroundColor: '#eee',
-                          borderColor: '#777',
-                          borderWidth: 1,
-                          borderRadius: 4,
-                          rich: {
-                              title: {
-                                  color: '#eee',
-                                  align: 'center'
-                              },
-                              abg: {
-                                  backgroundColor: '#333',
-                                  width: '100%',
-                                  align: 'right',
-                                  height: 25,
-                                  borderRadius: [4, 4, 0, 0]
-                              },
-                              Sunny: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Sunny
-                                  }
-                              },
-                              Cloudy: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Cloudy
-                                  }
-                              },
-                              Showers: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Showers
-                                  }
-                              },
-                              weatherHead: {
-                                  color: '#333',
-                                  height: 24,
-                                  align: 'left'
-                              },
-                              hr: {
-                                  borderColor: '#777',
-                                  width: '100%',
-                                  borderWidth: 0.5,
-                                  height: 0
-                              },
-                              value: {
-                                  width: 20,
-                                  padding: [0, 20, 0, 30],
-                                  align: 'left'
-                              },
-                              valueHead: {
-                                  color: '#333',
-                                  width: 20,
-                                  padding: [0, 20, 0, 30],
-                                  align: 'center'
-                              },
-                              rate: {
-                                  width: 40,
-                                  align: 'right',
-                                  padding: [0, 10, 0, 0]
-                              },
-                              rateHead: {
-                                  color: '#333',
-                                  width: 40,
-                                  align: 'center',
-                                  padding: [0, 10, 0, 0]
-                              }
-                          }
-                      }
-                  }},
-              {value:510, name: 'xxx',
-                  label: {
-                      normal: {
-                          formatter: [
-                              '{title|{b}}{abg|}',
-                              '  {weatherHead|天气}{valueHead|天数}{rateHead|占比}',
-                              '{hr|}',
-                              '  {Sunny|}{value|202}{rate|55.3%}',
-                              '  {Cloudy|}{value|142}{rate|38.9%}',
-                              '  {Showers|}{value|21}{rate|5.8%}'
-                          ].join('\n'),
-                          backgroundColor: '#eee',
-                          borderColor: '#777',
-                          borderWidth: 1,
-                          borderRadius: 4,
-                          rich: {
-                              title: {
-                                  color: '#eee',
-                                  align: 'center'
-                              },
-                              abg: {
-                                  backgroundColor: '#333',
-                                  width: '100%',
-                                  align: 'right',
-                                  height: 25,
-                                  borderRadius: [4, 4, 0, 0]
-                              },
-                              Sunny: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Sunny
-                                  }
-                              },
-                              Cloudy: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Cloudy
-                                  }
-                              },
-                              Showers: {
-                                  height: 30,
-                                  align: 'left',
-                                  backgroundColor: {
-                                      //image: weatherIcons.Showers
-                                  }
-                              },
-                              weatherHead: {
-                                  color: '#333',
-                                  height: 24,
-                                  align: 'left'
-                              },
-                              hr: {
-                                  borderColor: '#777',
-                                  width: '100%',
-                                  borderWidth: 0.5,
-                                  height: 0
-                              },
-                              value: {
-                                  width: 20,
-                                  padding: [0, 20, 0, 30],
-                                  align: 'left'
-                              },
-                              valueHead: {
-                                  color: '#333',
-                                  width: 20,
-                                  padding: [0, 20, 0, 30],
-                                  align: 'center'
-                              },
-                              rate: {
-                                  width: 40,
-                                  align: 'right',
-                                  padding: [0, 10, 0, 0]
-                              },
-                              rateHead: {
-                                  color: '#333',
-                                  width: 40,
-                                  align: 'center',
-                                  padding: [0, 10, 0, 0]
-                              }
-                          }
-                      }
-                  }
-              },
-          ],
-          itemStyle: {
-              emphasis: {
-                  shadowBlur: 10,
-                  shadowOffsetX: 0,
-                  shadowColor: 'rgba(0, 0, 0, 0.5)'
-              }
-          }
-      }
-  ]
+    tooltip: {
+        trigger: 'item',
+        formatter: "{b}: {c} ({d}%)"
+    },
+    // legend: {
+    //     orient: 'horizontal',
+    //     right: '10%',
+    //     x: 'left',
+    //     y: 'top',
+    //     data: ['一芳','頂新','萊爾富','Nike','肉多多火鍋','全聯','Toyata汽車','美聯社','四海遊龍']
+    // },
+    series: [
+        {
+            name: '類別来源',
+            type: 'pie',
+            selectedMode: 'single',
+            radius: [0, '45%'],
+            label: {
+                normal: {
+                    position: 'inner'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            //color: colors,
+            data: [
+                { value: 660, name: '網粉', selected:true },
+                { value: 210, name: '網黑' },
+                { value: 300, name: '中立' }
+            ]
+        },
+        {
+            name: '數據来源',
+            type: 'pie',
+            radius: ['64%', '85%'],
+            //color: colors,
+            label: {
+                normal: {
+                formatter: '{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                backgroundColor: '#eee',
+                borderColor: '#aaa',
+                borderWidth: 1,
+                borderRadius: 4,
+                rich: {
+                    hr: {
+                        //borderColor: '#aaa',
+                        //width: '100%',
+                        //borderWidth: 0.5,
+                        height: 0
+                    },
+                    b: {
+                        fontSize: 14,
+                        lineHeight: 25
+                    },
+                    per: {
+                        color: '#eee',
+                        backgroundColor: '#334455',
+                        padding: [2, 4],
+                        borderRadius: 2
+                    }
+                }
+            }
+        },
+        data: [
+                { value: 220, name: '一芳' },
+                { value: 220, name: '頂新' },
+                { value: 220, name: '萊爾富' },
+                { value: 70, name: 'Nike' },
+                { value: 70, name: '肉多多火鍋' },
+                { value: 70, name: '全聯' },
+                { value: 100, name: 'Toyata汽車' },
+                { value: 100, name: '美聯社' },
+                { value: 100, name: '四海遊龍' }
+            ]
+        }
+    ]
 };
-
 /* ============= 粉絲影響力-堆疊圖-堆疊柱狀圖 ===============*/
 
 fanInfluence.title = '粉專影響力';
@@ -431,7 +218,7 @@ function getOption(result, k) {
     var clusterAssment = result.clusterAssment;
     var centroids = result.centroids;
     var ptsInCluster = result.pointsInCluster;
-    var color = ['blcak'];
+    var color = ['black', 'pink'];
     var series = [];
     var name ='';
     for (i = 0; i < k; i++) {
@@ -483,7 +270,7 @@ function getOption(result, k) {
             }
         },
         series: series,
-        color: color
+        color: color[0]
     };
 }
 
