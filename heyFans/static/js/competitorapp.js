@@ -109,7 +109,8 @@ fanInfluence = {
     ],
     yAxis : [
         {
-            type : 'value'
+            type: 'value',
+            name: '影響力分數',
         }
     ],
     series : [
@@ -275,11 +276,24 @@ function getOption(result, k) {
 }
 
 
+/* ============= 競爭者交叉分析各自功能 ===============*/
+/* ============= 控制選擇粉絲專業只能單選 ===============*/
+function selectOnlycheckBox() {
+    $('.checkBoxGroup li input').click(function(){
+        if($(this).prop('checked')){
+          $('.checkBoxGroup li input:checkbox').prop('checked',false);
+            $(this).prop('checked', true);
+            //console.log($(this).val());
+        }
+    });
+}
 
 
-
-
-/* ============= init charts ===============*/
-echarts.init(document.getElementById('fanPie')).setOption(fanPie);
-echarts.init(document.getElementById('fanInfluence')).setOption(fanInfluence);
-echarts.init(document.getElementById('fanScatter')).setOption(fanScatter);
+$(function () {
+    selectOnlycheckBox();
+    $("#featureListsUl li:last-child").addClass("isActive");
+    /* ============= init charts ===============*/
+    echarts.init(document.getElementById('fanPie')).setOption(fanPie);
+    echarts.init(document.getElementById('fanInfluence')).setOption(fanInfluence);
+    echarts.init(document.getElementById('fanScatter')).setOption(fanScatter);
+});

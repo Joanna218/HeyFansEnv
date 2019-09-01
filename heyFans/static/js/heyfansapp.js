@@ -111,6 +111,7 @@ series: [
 
 /* ============= init charts ===============*/
 $(function () {
+    $("#featureListsUl li:first-child").addClass("isActive");
     echarts.init(document.getElementById('fanProfile')).setOption(fanProfile);
     echarts.init(document.getElementById('fanPageGrowth')).setOption(fanPageGrowth);
 });

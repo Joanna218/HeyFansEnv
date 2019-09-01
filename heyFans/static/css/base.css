@@ -11683,6 +11683,11 @@ body {
 h5 {
   font-weight: 700; }
 
+.isActive {
+  margin-left: 1px;
+  border-left: 3px solid #fe816d;
+  background-color: #fbe5e1; }
+
 body {
   height: 100%;
   background-color: #f2f3f3; }
@@ -11750,10 +11755,6 @@ body {
           margin-left: 1px;
           border-left: 3px solid #89878a;
           background-color: #efeef0; }
-        body .wrapper .row #sideBar #featureLists #featureListsUl .featureListsli.isActive {
-          margin-left: 1px;
-          border-left: 3px solid #fe816d;
-          background-color: #fbe5e1; }
   body .wrapper .row #main {
     background-color: #f2f3f3;
     min-height: 100vh; }
